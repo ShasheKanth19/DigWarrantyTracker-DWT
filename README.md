@@ -22,6 +22,3 @@ Objective
 
 To simplify warranty tracking and enhance user experience by combining automation, predictive analytics, and a robust full-stack architecture.
 
-Add badges (GitHub shields)
-Write a README with setup instructions + screenshots
-Or make it more ATS/resume aligned version
