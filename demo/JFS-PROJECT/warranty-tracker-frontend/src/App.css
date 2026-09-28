@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+.alert-primary {
+    background: linear-gradient(
+        135deg,
+        #2563EB,
+        #4F46E5
+    );
+    color: white;
+}
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+.result-card {
+    border-left: 5px solid #2563EB;
+}
+.progress {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    transition: width 1s ease-in-out;
+}
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12) !important;
+}

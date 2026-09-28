@@ -26,6 +26,10 @@ public class ProductPurchase {
     @JsonIgnoreProperties("purchases")
     private User user;
 
+    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("product")
+    private PredictionHistory predictionHistory;
+
     public ProductPurchase() {
     }
 
@@ -83,6 +87,10 @@ public class ProductPurchase {
         return user;
     }
 
+    public PredictionHistory getPredictionHistory() {
+        return predictionHistory;
+    }
+
     // ✅ Setters
     public void setId(int id) {
         this.id = id;
@@ -128,5 +136,9 @@ public class ProductPurchase {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public void setPredictionHistory(PredictionHistory predictionHistory) {
+        this.predictionHistory = predictionHistory;
     }
 }

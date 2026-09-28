@@ -79,7 +79,17 @@ export default function NotificationList() {
                                     }`}
                             >
                                 <div>
-                                    <p className="mb-1 fw-bold">{notif.message}</p>
+                                    <p className="mb-1 fw-bold">
+                                        {notif.message.includes("[AI Alert:") ? (
+                                            <>
+                                                {notif.message.split("[AI Alert:")[0]}
+                                                <br />
+                                                <span className="badge bg-danger mt-1 text-wrap text-start lh-base">
+                                                    🤖 AI Alert: {notif.message.split("[AI Alert:")[1].replace("]", "")}
+                                                </span>
+                                            </>
+                                        ) : notif.message}
+                                    </p>
                                     <small className="text-muted">{notif.date}</small>
                                 </div>
                                 {!notif.read && (

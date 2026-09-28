@@ -8,6 +8,8 @@ import UserList from './components/UserList';
 import AddUserForm from './components/AddUserForm';
 import AddProductForm from './components/AddProductForm';
 import NotificationList from './components/NotificationList';
+import ProductList from './components/product/ProductList';
+import MLDashboardPage from './components/mlDashboard/MLDashboardPage';
 
 function App() {
   return (
@@ -20,7 +22,8 @@ function App() {
         <Route path="/add-user" element={<AddUserForm />} />
         <Route path="/add-product" element={<AddProductForm />} />
         <Route path="/notifications" element={<NotificationList />} />
-
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/ml-dashboard" element={<MLDashboardPage />} />
 
       </Routes>
     </Router>

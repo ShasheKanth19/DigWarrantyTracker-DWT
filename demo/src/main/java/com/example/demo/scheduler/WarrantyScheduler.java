@@ -4,6 +4,7 @@ import com.example.demo.model.ProductPurchase;
 import com.example.demo.service.NotificationService;
 import com.example.demo.service.ProductPurchaseService;
 import com.example.demo.repository.NotificationRepository;
+import com.example.demo.model.PredictionHistory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -48,6 +49,12 @@ public class WarrantyScheduler {
             }
 
             if (message != null) {
+                // AI Alert Enhancement
+                PredictionHistory history = product.getPredictionHistory();
+                if (history != null && "High".equals(history.getRiskLevel())) {
+                    message += " [AI Alert: High Churn Risk. " + history.getRecommendation() + "]";
+                }
+
                 // Check if notification already exists for today to prevent duplicates
                 boolean exists = notificationRepository.existsByUserIdAndMessageAndDate(
                         product.getUser().getId(), message, today);

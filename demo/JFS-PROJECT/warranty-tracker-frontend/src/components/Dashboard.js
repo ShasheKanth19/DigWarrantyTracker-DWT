@@ -59,7 +59,7 @@ export default function Dashboard() {
 
         <div className="row justify-content-center">
           {/* View Users */}
-          <div className="col-md-3 mb-4">
+          <div className="col-md-4 mb-4">
             <div className="card shadow-lg border-0 rounded-4 h-100">
               <div className="card-body text-center">
                 <i className="bi bi-people fs-1 text-primary"></i>
@@ -73,7 +73,7 @@ export default function Dashboard() {
           </div>
 
           {/* Add New User */}
-          <div className="col-md-3 mb-4">
+          <div className="col-md-4 mb-4">
             <div className="card shadow-lg border-0 rounded-4 h-100">
               <div className="card-body text-center">
                 <i className="bi bi-person-plus fs-1 text-success"></i>
@@ -87,7 +87,7 @@ export default function Dashboard() {
           </div>
 
           {/* Add Warranty */}
-          <div className="col-md-3 mb-4">
+          <div className="col-md-4 mb-4">
             <div className="card shadow-lg border-0 rounded-4 h-100">
               <div className="card-body text-center">
                 <i className="bi bi-shield-check fs-1 text-warning"></i>
@@ -101,13 +101,41 @@ export default function Dashboard() {
           </div>
 
           {/* Notifications */}
-          <div className="col-md-3 mb-4">
+          <div className="col-md-4 mb-4">
             <div className="card shadow-lg border-0 rounded-4 h-100">
               <div className="card-body text-center">
                 <i className="bi bi-bell fs-1 text-danger"></i>
                 <h5 className="card-title mt-3">Notifications</h5>
                 <p className="text-muted">Check warranty expiry alerts.</p>
                 <button className="btn btn-outline-danger" onClick={() => navigate("/notifications")}>
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Products & AI */}
+          <div className="col-md-4 mb-4">
+            <div className="card shadow-lg border-0 rounded-4 h-100">
+              <div className="card-body text-center">
+                <i className="bi bi-box-seam fs-1 text-info"></i>
+                <h5 className="card-title mt-3">My Warranties</h5>
+                <p className="text-muted">View products and AI predictions.</p>
+                <button className="btn btn-outline-info" onClick={() => navigate("/products")}>
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* ML Insights */}
+          <div className="col-md-4 mb-4">
+            <div className="card shadow-lg border-0 rounded-4 h-100">
+              <div className="card-body text-center">
+                <i className="bi bi-graph-up-arrow fs-1 text-dark"></i>
+                <h5 className="card-title mt-3">ML Insights</h5>
+                <p className="text-muted">View AI model metrics & stats.</p>
+                <button className="btn btn-outline-dark" onClick={() => navigate("/ml-dashboard")}>
                   View
                 </button>
               </div>

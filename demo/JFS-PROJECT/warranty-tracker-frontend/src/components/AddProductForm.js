@@ -41,7 +41,7 @@ export default function AddProductForm() {
         e.preventDefault();
         try {
             await addProduct(product);
-            navigate("/dashboard");
+            navigate("/products");
         } catch (error) {
             console.error("Error adding product:", error);
             alert("Failed to add product.");

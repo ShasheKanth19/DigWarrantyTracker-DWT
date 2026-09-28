@@ -31,3 +31,24 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# React frontend
+JFS-PROJECT/warranty-tracker-frontend/node_modules/
+JFS-PROJECT/warranty-tracker-frontend/build/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Frontend environment files
+JFS-PROJECT/warranty-tracker-frontend/.env
+JFS-PROJECT/warranty-tracker-frontend/.env.*
+!JFS-PROJECT/warranty-tracker-frontend/.env.example
+
+# Logs
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
